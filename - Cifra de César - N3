@@ -1,0 +1,23 @@
+# Função para decodificar a mensagem usando a Cifra de César
+def decifra(mensagem, deslocamento):
+    decodificada = ""
+    for letra in mensagem:
+        if letra.isalpha():
+            nova_letra = chr(((ord(letra) - ord('A') - deslocamento) % 26) + ord('A'))
+            decodificada += nova_letra
+        else:
+            decodificada += letra
+    return decodificada
+
+# Ler o número de casos de teste
+n = int(input())
+
+# Para cada caso de teste
+for _ in range(n):
+    # Ler a mensagem codificada e o deslocamento
+    mensagem_codificada = input()
+    deslocamento = int(input())
+
+    # Decodificar a mensagem e imprimir o resultado
+    mensagem_decodificada = decifra(mensagem_codificada, deslocamento)
+    print(mensagem_decodificada)
