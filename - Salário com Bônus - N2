@@ -1,0 +1,15 @@
+# Ler o nome do vendedor
+nome = input()
+
+# Ler o salário fixo e o total de vendas efetuadas
+salario_fixo = float(input())
+total_vendas = float(input())
+
+# Calcular a comissão (15% sobre as vendas)
+comissao = total_vendas * 0.15
+
+# Calcular o total a receber (salário fixo + comissão)
+total_receber = salario_fixo + comissao
+
+# Imprimir o resultado formatado
+print("TOTAL = R$ {:.2f}".format(total_receber))
