@@ -1,0 +1,12 @@
+# Consumo 12KM/L
+# Ler o tempo de viagem e a velocidade media
+tempo_de_viagem = int(input())
+velocidade = int(input())
+
+# Calcular a KM total de viagem
+km_total = tempo_de_viagem * velocidade
+
+# Calcular o consumo e imprimir com 3 casas decimais
+consumo = km_total / 12
+
+print('{:.3f}'.format(consumo))
